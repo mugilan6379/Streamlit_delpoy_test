@@ -1,8 +1,11 @@
 import altair as alt
+import time
 import pandas as pd
 import seaborn as sns
 import streamlit as st
 st.title("Palmer's Penguins")
+with st.spinner():
+    time.sleep(2)
 st.markdown("Use this Streamlit app to make your own scatterplot about penguins!")
 selected_x_var = st.selectbox(
 "What do you want the x variable to be?",["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"],)
